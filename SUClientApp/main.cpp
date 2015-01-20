@@ -1,11 +1,11 @@
 #include "DFAppGui.h"
-#include <QApplication>
+#include "DFAppServices.h"
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    DFAppGui w;
-    w.show();
+    DFAppServices s(argc, argv);
+    DFAppGui g(&s);
+    g.show();
 
-    return a.exec();
+    return s.exec();
 }

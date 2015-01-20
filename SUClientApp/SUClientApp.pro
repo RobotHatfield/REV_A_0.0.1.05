@@ -12,7 +12,13 @@ TARGET = SUClientApp
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-        DFAppGui.cpp
+SOURCES += main.cpp \
 
-HEADERS  += DFAppGui.h
+HEADERS  += \
+
+OTHER_FILES += \
+    Dataflow.Gui.pri \
+    Dataflow.Core.pri
+
+include("Dataflow.Core.pri")
+include("Dataflow.Gui.pri")
